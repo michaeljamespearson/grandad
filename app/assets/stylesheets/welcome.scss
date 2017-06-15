@@ -1,0 +1,31 @@
+body { padding: 0; margin: 0; padding-left:0;}
+
+
+
+#pic{
+position: fixed;
+left: 50%;
+margin-left: -50%;
+    background-repeat: repeat-x;
+        -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;   
+}
+
+#pic .content{    
+    line-height: 20px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right:0px;
+    display:inline-block;
+    position:center;
+}
+
+#pic .content a.button {
+    position:absolute;
+    bottom:50%;
+    right:50%;
+    background:blue;
+    color:#FFF;
+}

@@ -1,0 +1,50 @@
+  <link href="https://blackrockdigital.github.io/startbootstrap-freelancer/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-freelancer/css/freelancer.min.css" rel="stylesheet"> </a>
+
+    <!-- Custom Fonts -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-freelancer/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> </a>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <header>
+        <div class="container2" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <h1 class="name">Add a message</h1>
+                        <hr class="star-light">
+                        <span class="skills">
+                        <%= form_for(@comment) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <div class="input">
+    <%= f.text_field :user, size:"25x1" %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <div class ="input">
+    <%= f.text_area :message, size: "25x6" %>
+    </div>
+  </div>
+    <%= f.submit 'Post message', :class => 'btn btn-lg btn-outline'%>
+<% end %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
